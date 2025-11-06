@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vinnie | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Bungee&family=DM+Serif+Text:ital@0;1&family=Offside&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav">
+      <h2 class="offside">OLUOCH<span class="span1">VN</span>/></h2>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </nav>
+      <button id="contactBtn" class="btn-grad">Contact</button>
+    </div>
+
+  <div class="body">
+    <div id="home" class="main">
+      <div class="content">
+        <p>
+          Hi, I’m a <span class="span1">Fullstack Developer</span> specializing in creating high-performance, scalable web applications using modern technologies across both frontend and backend. 
+          I build systems optimized for speed, maintainability, and real-world scalability.
+        </p>
+      </div>
+      <div class="aside">
+        <h1><img class="img" src="vnn.jpg" alt="Profile Image"></h1>
+      </div>
+    </div>
+
+    <div id="projects" class="work">
+      <h2 class="head2">Projects</h2>
+      <div class="maindiv">
+        <div class="p1">
+        <div class="space">
+          <h3 class="projecth">Portfolio</h3>
+          </div>
+          <p class="para">
+            Designed and developed a fully responsive portfolio website using HTML, CSS, and JavaScript
+             to showcase my projects,
+             skills, and experience. I focused on creating a clean, modern user
+              interface with smooth animations and intuitive navigation.
+          </p>
+        </div>
+        <div class="p1">
+          <div class="space">
+          <h3 class="projecth">Real-Time Chat</h3>
+          </div>
+          <p class="para">
+            Built a real-time chat platform using Node.js, Express, Socket.io, and MongoDB.
+            It supports live messaging, online user tracking, and private chat rooms. The frontend, 
+            built in React, is optimized for speed and responsive design.
+          </p>
+        </div>
+        <div class="p1">
+        <div class="space">
+          <h3 class="projecth">E-commerce</h3>
+          </div>
+          <p class="para">
+            Developed an end-to-end e-commerce platform with features like product listing,
+            cart management, and secure payments. The backend was built with Express.js and MongoDB,
+            while the frontend uses React and Redux for state management.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="about">
+      <h1 class="head2">About</h1>
+      <p class="aboutp">
+        I’m a passionate <span class="span1">Full-Stack Developer </span>focused on building fast, scalable,
+        and user-friendly web applications. I enjoy turning ideas into interactive 
+        digital experiences that combine clean design with powerful functionality.
+        <span class="span2">My expertise spans both frontend and backend development, working with modern
+        technologies</span> like <span class="span3">React, Node.js, Express, and MongoDB.</span> I pay close attention
+        to performance, usability, and maintainable code ensuring every project I build is optimized for growth.
+      </p>
+    </div>
+
+    <div id="services" class="services">
+      <h1 class="head2">Services</h1>
+      <div class="mservises">
+        <div class="p1">
+        <div class="space1">
+          <h2>Web Dev</h2>
+          </div>
+          <p class="para1">I build modern, responsive, 
+          and high-performance web applications using modern technologies
+           My focus is on speed, scalability, and user-friendly design.</p>
+        </div>
+        <div class="p1">
+        <div class="space1">
+        <h2>Database Design  Management</h2>
+        </div>
+            <p class="para1">I handle data modeling, indexing, and
+             optimization for fast and scalable data access with MongoDB or SQL databases.</p>
+        </div>
+        <div class="p1">
+        <div class="space1">
+        <h2>Performance Optimization</h2>
+        </div>
+          <p class="para1">analyze and optimize web apps for speed, SEO, and smooth 
+          user experience by improving code efficiency and reducing load times.</p>
+        </div>
+        </div>
+    </div>
+  </div>
+      <div class="confooter">
+        <div id="contact" class="contact">
+    <h1 class="head2">Contact</h1>
+    <form id="contactForm" method="POST">
+      <input name="name" placeholder="Full Name" required><br>
+      <input name="email" type="email" placeholder="Email Address" required><br>
+      <textarea name="message" class="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit" class="btn-grad">Submit</button> 
+    </form>
+    <p id="response" style="margin-top:10px;"></p>
+  </div>
+      </div>
+  
+      <script src="./script.js"></script>
+
+</body>
+</html>
