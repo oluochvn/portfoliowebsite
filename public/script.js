@@ -1,23 +1,37 @@
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault(); // Prevent reload
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const responseText = document.getElementById("response");
 
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
-  console.log("Sending:", data);
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("http://localhost:3000/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
 
-    const text = await res.text();
-    document.getElementById("response").textContent = text;
-    document.getElementById("response").style.color = "green";
-  } catch (err) {
-    console.error("Error:", err);
-    document.getElementById("response").textContent = "Failed to send.";
-    document.getElementById("response").style.color = "red";
-  }
-});1
+    responseText.textContent = "Sending...";
+
+    try {
+      const res = await fetch("https://portfoliowebsite-ten-flame.vercel.app/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const text = await res.text();
+
+      if (res.ok) {
+        responseText.style.color = "green";
+        responseText.textContent = text;
+        form.reset();
+      } else {
+        responseText.style.color = "red";
+        responseText.textContent = "Something went wrong. Please try again.";
+      }
+    } catch (err) {
+      console.error(err);
+      responseText.style.color = "red";
+      responseText.textContent = "Error: could not connect to server.";
+    }
+  });
+});
